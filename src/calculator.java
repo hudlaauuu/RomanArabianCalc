@@ -10,8 +10,8 @@ public class calculator {
         char operation = 0;
         int result;
         System.out.println("Введите выражение: ");
-        String expression = scanner.nextLine();              // считываем введенную строку
-        for (int i = 0; i < expression.length(); i++) {      // находим знак операции
+        String expression = scanner.nextLine();              
+        for (int i = 0; i < expression.length(); i++) {      
             switch (expression.charAt(i)) {
                 case '+':
                     operation = '+';
@@ -27,7 +27,7 @@ public class calculator {
                     break;
             }
         }
-        String[] arrayNum = expression.split("[+-/*]"); // делим строку на операнды
+        String[] arrayNum = expression.split("[+-/*]"); 
         if (arrayNum.length > 2) {
             throw new IOException("формат математической операции не удовлетворяет заданию - " +
                     "два операнда и один оператор (+, -, /, *)");
